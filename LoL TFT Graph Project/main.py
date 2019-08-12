@@ -24,11 +24,12 @@ def main(text_file):
     for edge in edges:
         graph.add_edge(edge[0], edge[1]) 
 
-    print("# Verticies:", graph.num_verticies)
-    print("# Edges:", graph.num_edges)
+    # print("# Verticies:", graph.num_verticies)
+    # print("# Edges:", graph.num_edges)
 
-    for fromVert, toVert in edges:
-        print(f"({fromVert}, {toVert})")
+    # for fromVert, toVert in edges:
+    #     print(f"({fromVert}, {toVert})")
+    print("Most Versatile Item:", graph.most_versatile_item())
 
     return graph
 
