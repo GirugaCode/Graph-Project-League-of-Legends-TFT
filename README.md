@@ -8,4 +8,4 @@ I will be modeling a Graph ADT (Abstract Data Structure) to take in data of all 
 ## Project Problems
 - A clique of champions based on the items they are recommended to share.
 - Based on an item you have, outputs which campions can you give it to.
-- Which champion has an item that is not recommended to any other champion.
+- Which champion has an item that is the least shared recommendation to any other champion.
