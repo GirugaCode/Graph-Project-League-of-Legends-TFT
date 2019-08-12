@@ -52,11 +52,14 @@ class Graph:
             return False
 
     def most_versatile_item(self):
-        """ A function the return what item is the most versatile."""
+        """ A function the return what item is the most versatile. """
         histo = {} # Helps keep track of the frequency of the items
 
         for vertex in self.vert_dict: 
+            # print("Vertex:", vertex)
             for neighbor in self.vert_dict[vertex].neighbors: # Iterate through all the neighbors
+                # print("\t Neighbors", neighbor.id)
+                # print("\t \tVertex:", vertex)
                 if neighbor in histo: # Add a count for a recurring item
                     histo[neighbor] += 1
                 else:
@@ -70,6 +73,18 @@ class Graph:
                 highest_frequency = histo[key]
                 item = key.id
         return highest_frequency, item
+
+    def item_for_champion(self, item):
+        """ Returns a list of champion you should give the item to. """
+
+        result_champions = []
+
+        for vertex in self.vert_dict: # Iterate through all the verticies
+            for neighbor in self.vert_dict[vertex].neighbors: # Iterate through all the neighbors
+                if neighbor.id == item: # Find the item 
+                    result_champions.append(vertex) # Add the vertex to a list
+        return result_champions # Output that set
+        
 
 
 
