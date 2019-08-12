@@ -30,7 +30,9 @@ def main(text_file):
     # for fromVert, toVert in edges:
     #     print(f"({fromVert}, {toVert})")
     print("Most Versatile Item:", graph.most_versatile_item())
-    print("Champions that can use this item are:", graph.item_for_champion("Dragon's Claw"))
+    print("Least Shared Item:", graph.least_versatile_item())
+    input_item = input("Which Item are you trying to pair to a Champion? ")
+    print("Champions that can use this item are:", graph.item_for_champion(input_item))
 
     return graph
 

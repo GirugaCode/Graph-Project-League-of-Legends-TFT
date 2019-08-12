@@ -9,3 +9,23 @@ I will be modeling a Graph ADT (Abstract Data Structure) to take in data of all 
 - The most versatile item in the game.
 - Based on an item you have, outputs which campions can you give it to.
 - Which champion has an item that is the least shared recommendation to any other champion.
+
+# Usage
+## Run
+```
+python3 main.py graph-data.txt
+```
+
+## Input (example)
+```
+Which Item are you trying to pair to a Champion? Dragon's Claw
+```
+
+## Output (example)
+```
+Most Versatile Item: (15, 'Morellonomicon')
+Least Shared Item: (1, 'Redemption')
+
+Which Item are you trying to pair to a Champion? Dragon's Claw
+Champions that can use this item are: ['Darius', 'Garen', 'Braum', 'Kassadin', 'Shen', 'Aatrox', 'Poppy', 'Akali', 'Sejuani']
+```
